@@ -1,0 +1,166 @@
+/* 1. VARIABLES & BASE STYLES */
+:root {
+  --primary-blue: #0071e3;
+  --apple-gray: rgba(251, 251, 253, 0.8);
+  --footer-bg: #f5f5f7;
+  --text-dark: #1d1d1f;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  color: var(--text-dark);
+  margin: 0;
+  padding-top: 44px; /* Fixed nav ቦታ እንዲለቅ */
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+.global-nav {
+  background-color: var(--apple-gray);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* 2. HERO SECTION STYLES */
+.hero-section {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  min-height: 40vh; /* Default for mobile */
+}
+
+.iphone-hero {
+  background-image: url("../images/hero_iphone_family__fuz5j2v5xx6y_medium_2x.jpg");
+}
+.macbook-hero {
+  background-image: url("../images/hero_macbook_neo__gnm3snkti4a6_medium_2x.jpg");
+}
+
+/* 3. RESPONSIVE BREAKPOINTS  */
+@media (max-width: 575px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero-section {
+    height: 50vh;
+    padding-top: 50px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    height: 75vh;
+    padding-top: 60px;
+  }
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    height: 80vh;
+    padding-top: 70px;
+  }
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-section {
+    height: 92vh;
+    padding-top: 90px;
+  }
+  .hero-title {
+    font-size: 4.8rem;
+  }
+}
+
+/* 4. GRID ITEMS */
+.grid-item {
+  height: 580px;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-color: #f5f5f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.ipad-air {
+  background-image: url("../images/promo_ipad_air_m4__f9ie3h3pzr6m_medium_2x.jpg");
+}
+.macbook-pro {
+  background-image: url("../images/promo_macbook_pro__e3xqrygvp9ea_medium_2x.jpg");
+}
+.airpods {
+  background-image: url("../images/promo_airpodspro_3__f6xmza7bglei_medium_2x.jpg");
+}
+.business {
+  background-image: url("../images/promo_apple_business__fi88n3dz0emq_medium_2x.jpg");
+}
+.trade-in {
+  background-image: url("../images/promo_iphone_tradein__bugw15ka691e_medium_2x.jpg");
+}
+.apple-card {
+  background-image: url("../images/promo_apple_card__5cm7draujpey_medium_2x.jpg");
+}
+
+/* 5. BUTTON STYLES (Refactored) */
+.btn-blue,
+.btn-outline-blue {
+  border-radius: 50px;
+  padding: 8px 22px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-blue {
+  background-color: var(--primary-blue);
+  color: white !important;
+  border: none;
+}
+.btn-blue:hover {
+  background-color: #0077ed;
+}
+
+.btn-outline-blue {
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue) !important;
+}
+.btn-outline-blue:hover {
+  background-color: var(--primary-blue);
+  color: white !important;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: #6e6e73;
+}
